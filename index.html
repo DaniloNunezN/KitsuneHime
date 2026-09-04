@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KitsuneHime | Ropa de Anime</title>
+    
+    <link rel="stylesheet" href="./global-styles.css" />
+    <link rel="stylesheet" href="./header.css" />
+    <link rel="stylesheet" href="./main.css" />
+    
+    <link rel="icon" type="image/svg+xml" href="./Imagenes/logo.svg">
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: #fdf5f7;
+      }
+
+      #header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        padding: 10px 20px;
+      }
+      
+      .contact, .location {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+
+      #navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 15px 0;
+      }
+      
+      .links {
+        display: flex;
+        gap: 30px; 
+      }
+
+      .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+      }
+      
+      .logo h2 {
+        font-size: 2.5rem;
+        margin: 0;
+      }
+
+      #hero {
+        position: relative;
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+      
+      #hero .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -2; 
+      }
+      
+      #hero .hero-logo {
+        position: absolute;
+        right: 10%; 
+        width: 350px; 
+        z-index: -1; 
+        opacity: 0.9;
+      }
+      
+      #hero .info {
+        position: relative;
+        z-index: 10;
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 30px;
+        border-radius: 12px;
+        max-width: 500px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      #hero .info h1, 
+      #hero .info p {
+        margin: 0;
+      }
+
+      #catalogo h3 {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      #catalogo .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+      }
+
+      #catalogo .card {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        transition: transform 0.2s ease;
+      }
+
+      #catalogo .card:hover {
+        transform: translateY(-5px);
+      }
+
+      #catalogo .card-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      #catalogo .card-body {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding-top: 15px;
+      }
+
+      #catalogo .card-body h4,
+      #catalogo .card-body span {
+        margin: 0;
+      }
+
+      @media (max-width: 992px) {
+        #catalogo .cards { grid-template-columns: repeat(2, 1fr); }
+      }
+
+      @media (max-width: 768px) {
+        #header { flex-direction: column; gap: 10px; }
+        .logo { position: static; transform: none; margin-bottom: 15px; }
+        #navbar { flex-direction: column; text-align: center; }
+        #hero .hero-logo { width: 200px; right: 5%; opacity: 0.5; } 
+        .links { gap: 15px; margin-bottom: 15px; flex-wrap: wrap; justify-content: center; }
+      }
+
+      @media (max-width: 576px) {
+        #catalogo .cards { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container" id="main-header">
+      <div id="header">
+        <div class="contact">
+          <span>+56945867296</span>
+          <span>contacto@kitsunehime.cl</span>
+        </div>
+        <div class="location">
+          <span>San Bernardo, Santiago Chile 🇨🇱</span>
+        </div>
+      </div>
+      <nav id="navbar">
+        <div class="links">
+          <a class="link active" href="/">Inicio</a>
+          <a class="link" href="poleras.html">Poleras</a>
+          <a class="link" href="pantalones.html">Pantalones</a>
+          <a class="link" href="index.html">Polerones</a>
+          <a class="link" href="index.html">Accesorios</a>
+        </div>
+        
+        <div class="logo">
+          <h1 class="fw-bold">KitsuneHime 🦊</h1>
+        </div>
+        
+        <div class="actions">
+          <span style="font-size: 1.5rem;">🛒</span> 
+        </div>
+      </nav>
+    </header>
+    
+    <main>
+      <section class="container" id="hero">
+        
+        <img class="background" src="./Imagenes/fondo.png" alt="Modelos con ropa de anime">
+        
+        <img class="hero-logo" src="./Imagenes/logo.svg" alt="Logo KitsuneHime">
+        
+        <div class="info">
+          <span class="fw-bold">Estilo Kitsune</span>
+          <h1>Vistete como un verdaro fan</h1>
+          <p>Descubre nuestra colección de poleras y pantalones con los mejores diseños de tus series favoritas.</p>
+          <div class="action">
+            <a href="#catalogo" class="btn" style="text-decoration: none; display: inline-block;">Ver Catálogo</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="catalogo">
+        <div class="container">
+          <h3 class="fw-semibold">Explora por categorías</h3>
+
+          <div class="cards">
+            <a href="poleras.html" class="card">
+              <div class="card-top">
+                <img class="card-image" src="./Imagenes/images.jpg" alt="Categoría Poleras">
+              </div>
+              <div class="card-body">
+                <h4>Poleras Oversize</h4>
+                <span>Ver diseños</span>
+              </div>
+            </a>
+
+            <a href="pantalones.html" class="card">
+              <div class="card-top">
+                <img class="card-image" src="./Imagenes/pantalon.jpg" alt="Categoría Pantalones/Jeans">
+              </div>
+              <div class="card-body">
+                <h4>Pantalones Cargo</h4>
+                <span>Ver estilos</span>
+              </div>
+            </a>
+            
+            <a href="index.html" class="card">
+              <div class="card-top">
+                <img class="card-image" src="./Imagenes/400.png" alt="Categoría Polerones">
+              </div>
+              <div class="card-body">
+                <h4>Polerones</h4>
+                <span>Ver Estilos</span>
+              </div>
+            </a>
+            
+            <a href="index.html" class="card">
+              <div class="card-top">
+                <img class="card-image" src="./Imagenes/set.jpg" alt="Categoría Accesorios">
+              </div>
+              <div class="card-body">
+                <h4>Accesorios</h4>
+                <span>Ver detalles</span>
+              </div>
+            </a>
+            
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer id="main-footer" style="text-align: center; padding: 20px;">
+      Todos los derechos reservados.
+    </footer>
+  </body>
+</html>
